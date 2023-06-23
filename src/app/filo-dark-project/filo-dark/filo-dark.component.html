@@ -11,7 +11,7 @@
     </nav>
   </header>
 
-  <main class="">
+  <main>
     <section class="relative w-full">
       <div class="px-10 z-10 absolute top-0 flex flex-col items-center justify-center">
         <img class="mb-6 max-h-80" src="./../../../assets/filodark/images/illustration-intro.png" alt="intro">
@@ -31,7 +31,8 @@
       </div>
     </section>
 
-    <section class="bg-dark-blue-main-fd">
+    <!-- Servicios -->
+    <section class="bg-dark-blue-main-fd pb-12">
       <div class="flex flex-col justify-center items-center">
         <article class="w-full max-w-sm flex flex-col items-center text-center p-7" *ngFor="let item of listService">
           <img class="mb-8 h-10 w-11" [src]="item.icon" [alt]="item.title">
@@ -40,11 +41,48 @@
         </article>
       </div>
     </section>
+
+    <!-- Productividad -->
+    <section class="py-12 px-7 bg-dark-blue-main-fd">
+      <article class="flex flex-col">
+        <figure class="mb-7">
+          <img src="./../../../assets/filodark/images/illustration-stay-productive.png" alt="productive">
+        </figure>
+        <div class="space-y-3">
+          <h2 class="text-base font-bold text-white-fd">Stay productive, wherever you are</h2>
+          <p class="text-sm font-medium text-white-fd">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+          <p class="text-sm font-medium text-white-fd">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+          <a class="text-xs text-cyan-fd border-cyan-fd border-b-[1px] pb-1 flex items-center justify-between w-40">
+            See how Fylo works
+            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><circle id="b" cx="6" cy="6" r="6"/><filter x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" id="a"><feOffset in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0" in="shadowBlurOuter1"/></filter></defs><g fill="none" fill-rule="evenodd"><g transform="translate(2 2)"><use fill="#000" filter="url(#a)" xlink:href="#b"/><use fill="#62E0D9" xlink:href="#b"/></g><path d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z" fill="#1B2330"/></g></svg>
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-12 bg-dark-blue-main-fd">
+      <div class="w-full flex justify-center px-7">
+        <div class="w-full flex flex-col items-center max-w-xs space-y-8 relative">
+          <article *ngFor="let item of team" class="text-white-fd p-7 bg-dark-blue-testimonial-fd rounded-md z-10">
+            <p class="mb-7 text-xs font-medium leading-5">{{item.profile}}</p>
+            <div class="flex items-center gap-x-4">
+              <figure class="w-8 h-8 rounded-full overflow-hidden">
+                <img class="w-full h-full object-cover" [src]="item.photo" [alt]="item.name">
+              </figure>
+              <div>
+                <h3 class="text-base font-semibold">{{item.name}}</h3>
+                <p class="text-xs">{{item.role}}</p>
+              </div>
+            </div>
+          </article>
+          <span class="w-7 h-5 bg-no-repeat bg-cover bg-center absolute -top-12 left-2" style="background-image: url('./../../../assets/filodark/images/bg-quotes.png');"></span>
+        </div>
+      </div>
+    </section>
   </main>
 
 </div>
-
-
 
 
 

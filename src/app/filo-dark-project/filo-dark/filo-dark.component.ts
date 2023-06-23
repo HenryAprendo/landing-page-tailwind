@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { dataServices, Service } from './../../data/service';
-
+import { team, Team} from './../../data/team';
 @Component({
   selector: 'app-filo-dark',
   standalone: true,
@@ -13,7 +13,7 @@ export class FiloDarkComponent {
 
   listService: Service[] = dataServices.slice();
 
-
+  team: Team[] = team.slice();
 
 }
 
