@@ -12,11 +12,11 @@
   </header>
 
   <main>
-    <section class="relative w-full">
-      <div class="px-10 z-10 absolute top-0 flex flex-col items-center justify-center">
+    <section class="relative w-full md:h-[650px]">
+      <div class="px-10 z-10 absolute top-0 flex flex-col items-center justify-center md:max-w-lg md:right-0 md:left-0 md:mx-auto md:top-4 lg:max-w-2xl" >
         <img class="mb-6 max-h-80" src="./../../../assets/filodark/images/illustration-intro.png" alt="intro">
         <div class="w-full flex flex-col items-center justify-center gap-y-5 text-center">
-          <h2 class="text-xl font-semibold  text-white-fd">All your files in one secure location, accesible anywhere.</h2>
+          <h2 class="text-xl font-semibold  text-white-fd lg:text-3xl">All your files in one secure location, accesible anywhere.</h2>
           <p class="text-white-fd text-sm font-medium">Fylo stores all your most important files in one secure location.
             Access them wherever you need, share and collaborate with friends family, and co-workers.
           </p>
@@ -24,10 +24,13 @@
         </div>
       </div>
 
-      <div class="relative w-full h-[320px] bg-dark-blue-testimonial-fd">
-        <img class="absolute bottom-0 w-full max-h-40" src="./../../../assets/filodark/images/bg-curvy-mobile.svg" alt="curvy-mobile">
+      <div class="relative w-full h-[320px] bg-dark-blue-testimonial-fd md:h-full">
+        <picture>
+          <source srcset="./../../../assets/filodark/images/bg-curvy-desktop.svg" media="(min-width: 768px)">
+          <img class="absolute bottom-0 w-full max-h-40 md:max-h-72" src="./../../../assets/filodark/images/bg-curvy-mobile.svg" alt="curvy-mobile">
+        </picture>
       </div>
-      <div class="w-full h-[200px] bg-dark-blue-main-fd">
+      <div class="w-full h-[200px] bg-dark-blue-main-fd md:hidden">
       </div>
     </section>
 
@@ -92,6 +95,8 @@
     </section>
   </main>
 
+
+  <!-- Pie de página -->
   <footer class=" bg-dark-blue-footer-fd px-7 pb-12">
     <div class="pt-72 w-full max-w-sm">
       <figure class="mb-6">
